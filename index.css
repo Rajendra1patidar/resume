@@ -1,261 +1,154 @@
-/* Global Styles */
-* {
+/* General Styles */
+body {
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #161616; /* Dark gray text */
 }
 
-body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-    padding-bottom: 2rem;
-}
-
-/* Header Styling */
 header {
-    background-color: #3498db;
-    color: white;
-    padding: 2rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #0f62fe; /* IBM Blue */
+    color: #ffffff; /* White text */
+    padding: 40px 0;
+    text-align: center;
 }
 
 .profile-header {
     display: flex;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .profile-photo {
+    border-radius: 50%;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.profile-photo:hover {
-    transform: scale(1.05);
-}
-
-.profile-info {
-    margin-left: 2rem;
+    border: 4px solid #ffffff; /* White border */
 }
 
 .profile-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffffff; /* White text */
 }
 
-.profile-info p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+.tagline {
     font-style: italic;
+    color: #c6c6c6; /* Light gray */
 }
 
-/* Navigation */
 nav ul {
-    display: flex;
     list-style: none;
-    gap: 1.5rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
-    color: white;
+    color: #ffffff; /* White text */
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-    position: relative;
+    font-weight: bold;
     transition: color 0.3s;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s;
 }
 
 nav a:hover {
-    color: #f1f1f1;
+    color: #8a3ffc; /* IBM Purple */
 }
 
-nav a:hover::after {
-    width: 100%;
-}
-
-/* Main Content */
 main {
-    max-width: 1200px;
+    padding: 20px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
 }
 
 section {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
 }
 
 h2 {
-    color: #3498db;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #f1f1f1;
-    font-size: 1.8rem;
+    color: #0f62fe; /* IBM Blue */
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
-/* Education Table */
+.content-box {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #e0e0e0; /* Light gray border */
 }
 
 th, td {
-    padding: 1rem;
+    padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #f1f1f1;
 }
 
 th {
-    background-color: #f9f9f9;
-    font-weight: 600;
-    color: #3498db;
+    background-color: #0f62fe; /* IBM Blue */
+    color: #ffffff; /* White text */
 }
 
-tr:hover {
-    background-color: #f9f9f9;
+tr:nth-child(even) {
+    background-color: #f4f4f4; /* Light gray */
 }
 
-/* Work Experience and Projects */
-article {
-    margin-bottom: 1.5rem;
+ul {
+    padding-left: 20px;
 }
 
-article h3 {
-    color: #2980b9;
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
+ul li {
+    margin-bottom: 10px;
 }
 
-article p {
-    margin-bottom: 0.5rem;
+footer {
+    background-color: #161616; /* Dark gray */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 20px;
 }
 
-article strong {
-    color: #2c3e50;
-}
-
-article ul {
-    margin-left: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-article li {
-    margin-bottom: 0.5rem;
-}
-
-/* Links */
-a {
-    color: #3498db;
+footer a {
+    color: #8a3ffc; /* IBM Purple */
     text-decoration: none;
     transition: color 0.3s;
 }
 
-a:hover {
-    color: #2980b9;
-    text-decoration: underline;
-}
-
-/* About Section */
-.about {
-    background-color: #f9f9f9;
-    border-left: 4px solid #3498db;
-}
-
-.about p {
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-}
-
-footer h2 {
-    color: white;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-footer a {
-    color: #3498db;
-    margin: 0 0.5rem;
-}
-
 footer a:hover {
-    color: white;
+    color: #ffffff; /* White text */
 }
 
-footer p {
-    margin: 1rem 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .profile-info {
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-    
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    th, td {
-        padding: 0.5rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* Additional Enhancements */
-hr {
-    border: none;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 1rem 0;
-}
-
-section#projects {
-    background-color: #fcfcfc;
-}
-
-section#projects h3 {
+.back-to-top {
     display: inline-block;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.3rem;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8a3ffc; /* IBM Purple */
+    color: #ffffff; /* White text */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #6e32c9; /* Darker purple */
+}
+
+/* Icons */
+.fas {
+    margin-right: 8px;
+    color: #0f62fe; /* IBM Blue */
 }
